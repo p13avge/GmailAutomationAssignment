@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7pI406fxS9XS8M5Xp1MWq/nD5483xFAej+osFN2ZNBI5QXIHoKUsCheXD7AWI17WJcBpT9y5VTZnWXT5ReDyIA==",
+  "dgSpecHash": "fjrbT5UB9AIWLzr/5HMMzWmFpgLo45HazCRlGijzRxoNmYA842KUomZIy1lU2Em3FD2bPYGs4Pyk7KuNr0UQIQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\savgeris\\source\\repos\\Gmail\\Gmail\\Gmail.csproj",
+  "projectFilePath": "C:\\Users\\savgeris\\OneDrive - Deloitte (O365D)\\Documents\\githubLocalRepo\\GitHubDesktop\\Gmail\\Gmail.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\savgeris\\.nuget\\packages\\anglesharp\\0.16.1\\anglesharp.0.16.1.nupkg.sha512",
     "C:\\Users\\savgeris\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\savgeris\\source\\repos\\Gmail\\Gmail\\Gmail.csproj": {}
+    "C:\\Users\\savgeris\\OneDrive - Deloitte (O365D)\\Documents\\githubLocalRepo\\GitHubDesktop\\Gmail\\Gmail.csproj": {}
   },
   "projects": {
-    "C:\\Users\\savgeris\\source\\repos\\Gmail\\Gmail\\Gmail.csproj": {
+    "C:\\Users\\savgeris\\OneDrive - Deloitte (O365D)\\Documents\\githubLocalRepo\\GitHubDesktop\\Gmail\\Gmail.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\savgeris\\source\\repos\\Gmail\\Gmail\\Gmail.csproj",
+        "projectUniqueName": "C:\\Users\\savgeris\\OneDrive - Deloitte (O365D)\\Documents\\githubLocalRepo\\GitHubDesktop\\Gmail\\Gmail.csproj",
         "projectName": "Gmail",
-        "projectPath": "C:\\Users\\savgeris\\source\\repos\\Gmail\\Gmail\\Gmail.csproj",
+        "projectPath": "C:\\Users\\savgeris\\OneDrive - Deloitte (O365D)\\Documents\\githubLocalRepo\\GitHubDesktop\\Gmail\\Gmail.csproj",
         "packagesPath": "C:\\Users\\savgeris\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\savgeris\\source\\repos\\Gmail\\Gmail\\obj\\",
+        "outputPath": "C:\\Users\\savgeris\\OneDrive - Deloitte (O365D)\\Documents\\githubLocalRepo\\GitHubDesktop\\Gmail\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

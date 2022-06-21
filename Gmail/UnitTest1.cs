@@ -19,6 +19,7 @@ namespace Gmail
 
             new WebDriverManager.DriverManager().SetUpDriver(new FirefoxConfig());
             test = new FirefoxDriver();
+            test.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3); //adding time delay gloabaly, so after each action the test waits for 3secs
             //new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
             //test = new ChromeDriver();
             test.Url= "https://accounts.google.com/signin/v2/identifier?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2Fb%2F1%2FAddMailService&followup=https%3A%2F%2Faccounts.google.com%2Fb%2F1%2FAddMailService&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
@@ -32,12 +33,12 @@ namespace Gmail
             test.FindElement(By.XPath("//div[@class='Xb9hP']/input")).SendKeys(username);
             test.FindElement(By.XPath("//div[@id='identifierNext']/div/button")).Click();
 
-            Thread.Sleep(2000); // Test was immediatly typing the password on the 'input' field of the username. I add it a delay until the next page fully loads 
+            //Thread.Sleep(2000); // Test was immediatly typing the password on the 'input' field of the username. I add it a delay until the next page fully loads 
 
             test.FindElement(By.XPath("//div[@class='aXBtI Wic03c']/div/input")).SendKeys(password);
             test.FindElement(By.XPath("//div[@id='passwordNext']/div/button")).Click();
 
-            Thread.Sleep(2000);
+            //Thread.Sleep(2000);
             
             //Step 4
             String primarySection = test.FindElement(By.XPath("//div[@aria-label='Κύρια']")).GetAttribute("aria-selected");
