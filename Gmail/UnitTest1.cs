@@ -19,7 +19,7 @@ namespace Gmail
 
             new WebDriverManager.DriverManager().SetUpDriver(new FirefoxConfig());
             test = new FirefoxDriver();
-            test.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3); //adding time delay gloabaly, so after each action the test waits for 3secs
+            test.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5); //adding time delay gloabaly when an elements if being searched but not found
             //new WebDriverManager.DriverManager().SetUpDriver(new ChromeConfig());
             //test = new ChromeDriver();
             test.Url= "https://accounts.google.com/signin/v2/identifier?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2Fb%2F1%2FAddMailService&followup=https%3A%2F%2Faccounts.google.com%2Fb%2F1%2FAddMailService&flowName=GlifWebSignIn&flowEntry=ServiceLogin";
@@ -33,7 +33,7 @@ namespace Gmail
             test.FindElement(By.XPath("//div[@class='Xb9hP']/input")).SendKeys(username);
             test.FindElement(By.XPath("//div[@id='identifierNext']/div/button")).Click();
 
-            //Thread.Sleep(2000); // Test was immediatly typing the password on the 'input' field of the username. I add it a delay until the next page fully loads 
+            Thread.Sleep(2000); // Test was immediatly typing the password on the 'input' field of the username. I add it a delay until the next page fully loads 
 
             test.FindElement(By.XPath("//div[@class='aXBtI Wic03c']/div/input")).SendKeys(password);
             test.FindElement(By.XPath("//div[@id='passwordNext']/div/button")).Click();
@@ -53,17 +53,16 @@ namespace Gmail
 
             //Step 6
             int numberOfEmails = test.FindElements(By.TagName("tr")).Count; // Total number of emails on primary section
-            //TestContext.Progress.WriteLine(numberOfEmails);
+            TestContext.Progress.WriteLine(numberOfEmails);
 
-            //String sender = test.FindElement(By.XPath("//div[@id=':3c']/span")).Text;
-            //TestContext.Progress.WriteLine("Sender is :" +sender);
+            
                 
             //Step 7
-            //String sender = test.FindElement(By.XPath("//tbody/tr[11]/td[5]/div[2]/span/span")).Text;
-            //TestContext.Progress.WriteLine("Sender is :" + sender);
+            String sender = test.FindElement(By.XPath("//tbody/tr[11]/td[5]/div[2]/span/span")).Text;
+            TestContext.Progress.WriteLine("Sender is :" + sender);
 
-            //String subject = test.FindElement(By.XPath("//tbody/tr[11]/td[6]/div/div/div/span/span")).Text;
-            //TestContext.Progress.WriteLine("Subject is :" + subject);
+            String subject = test.FindElement(By.XPath("//tbody/tr[11]/td[6]/div/div/div/span/span")).Text;
+            TestContext.Progress.WriteLine("Subject is :" + subject);
 
             FindNthElement(11);
             FindNthElement(12);
