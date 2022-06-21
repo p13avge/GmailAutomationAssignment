@@ -52,8 +52,8 @@ namespace Gmail
             }
 
             //Step 6
-            int numberOfEmails = test.FindElements(By.TagName("tr")).Count; // Total number of emails on primary section
-            TestContext.Progress.WriteLine(numberOfEmails);
+            int numberOfEmails = test.FindElements(By.XPath("//tr[@role='row']")).Count; // Total number of emails on primary section
+            TestContext.Progress.WriteLine("Total number of emails is: "  +numberOfEmails);
 
             
                 
