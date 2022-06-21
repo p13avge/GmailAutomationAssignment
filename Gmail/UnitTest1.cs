@@ -8,8 +8,8 @@ namespace Gmail
 {
     public class Tests
     {
-        String username = "bba18148@uom.edu.gr";
-        String password = "Kwnstantina9!";
+        String username = "--Usernamehere--";
+        String password = "--PasswordHere!--";
         IWebDriver test;
 
         [SetUp]
@@ -38,12 +38,12 @@ namespace Gmail
             test.FindElement(By.XPath("//div[@class='aXBtI Wic03c']/div/input")).SendKeys(password);
             test.FindElement(By.XPath("//div[@id='passwordNext']/div/button")).Click();
 
-            //Thread.Sleep(2000);
+            
             
             //Step 4
             String primarySection = test.FindElement(By.XPath("//div[@aria-label='Κύρια']")).GetAttribute("aria-selected");
             //TestContext.Progress.WriteLine("Primary section:" + primarySection);
-            //Assert.That(primarySection, Is.EqualTo("true")); //An assertion that by default after the log in, Primary section is selected
+            Assert.That(primarySection, Is.EqualTo("true")); //An assertion that by default after the log in, Primary section is selected
 
             //Step 5
             if (primarySection != "true")
@@ -67,8 +67,8 @@ namespace Gmail
             FindNthElement(11);
             FindNthElement(12);
             FindNthElement(14);
-            FindNthElement(1);
             FindNthElement(5);
+            FindNthElement(1); // I cannot retrieve the subject of this row, i need to find a more dynamic way to retrieve it
 
 
 
